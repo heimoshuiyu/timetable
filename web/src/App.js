@@ -69,8 +69,7 @@ function App() {
   }
 
   function refreshRange() {
-    fetch("/api/range", {
-    }).then((res) => {
+    fetch("/api/range", {}).then((res) => {
       if (!res.ok) {
         res.text().then((text) => {
           alert(text);

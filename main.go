@@ -101,7 +101,6 @@ func main() {
 		w.Write([]byte("hello"))
 	})
 
-
 	// handle get all range api
 	http.HandleFunc("/api/range", func(w http.ResponseWriter, r *http.Request) {
 		var err error
