@@ -73,7 +73,7 @@ func main() {
 	running := false
 
 	// connect database
-	db, err := sql.Open("sqlite3", "db.sqlite")
+	db, err := sql.Open("sqlite3", Dbname)
 	if err != nil {
 		panic(err)
 	}
@@ -346,7 +346,7 @@ func main() {
 
 	// start http server
 	log.Println("start http server at :8080")
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe("127.0.0.1:8080", nil)
 }
 
 func HandleError(w http.ResponseWriter, err error) {
